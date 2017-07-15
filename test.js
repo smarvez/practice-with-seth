@@ -1,9 +1,10 @@
-function sayHelloNTimes(n) {
-  for (let i = 0; i < n; i++) {
-    console.log("Hello World " + i);
-  }
-}
+console.log("What's your name?")
+var stdin = process.openStdin();
 
-sayHelloNTimes(3);
-console.log("blah");
-sayHelloNTimes(2);
+stdin.addListener("data", function(d) {
+    // note:  d is an object, and when converted to a string it will
+    // end with a linefeed.  so we (rather crudely) account for that
+    // with toString() and then trim()
+    console.log("Hello " +
+        d.toString().trim());
+  });
