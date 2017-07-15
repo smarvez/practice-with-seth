@@ -25,4 +25,8 @@ stdin.addListener("data", function(d) {
     else if (lastName === "") {
       console.log("What's your last name?")
     }
+    else {
+      process.exit(0);
+    }
+
   });
