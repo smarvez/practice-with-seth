@@ -4,6 +4,6 @@ function sayHelloNTimes(n) {
   }
 }
 
-sayHelloNTimes(5);
+sayHelloNTimes(3);
 console.log("blah");
 sayHelloNTimes(2);
